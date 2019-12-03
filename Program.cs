@@ -14,11 +14,13 @@ namespace TreangleSort
         {
             treangles.Add(GetTreangle());
 
-            treangles.Sort(new TreangleComparer());
+            treangles.Sort();
             foreach (var item in treangles)
             {
                 Console.WriteLine($"[{item.Name}] {item.Area} ");
             }
+
+            Main();
         }
         static Treangle GetTreangle()
         {
@@ -26,14 +28,16 @@ namespace TreangleSort
 
             string[] splitedInput = new string[4];
 
-            splitedInput = input.Split(',');
+            splitedInput = input.Split('.');
 
+            //исключение свое. и структуру менять. 
             string name;
             double firstSide;
             double secondSide;
             double thirdSide;
 
             name = splitedInput[0];
+
             firstSide = Convert.ToDouble(splitedInput[1]);
             secondSide = Convert.ToDouble(splitedInput[2]);
             thirdSide = Convert.ToDouble(splitedInput[3]);

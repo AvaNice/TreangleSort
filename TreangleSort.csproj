@@ -46,8 +46,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Treangle.cs" />
-    <Compile Include="TreangleAreaCounter.cs" />
-    <Compile Include="TreangleComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
