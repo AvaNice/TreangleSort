@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace TreangleSort
 {
-    class Treangle : IComparable<Treangle>
+    class Triangle : IComparable<Triangle>
     {
         private const int BISECTOR = 2;
 
@@ -18,7 +15,7 @@ namespace TreangleSort
         public double Perimeter { get; }
 
 
-        public Treangle(string name, double firstSide, double secondSide, double thirdSide)
+        public Triangle(string name, double firstSide, double secondSide, double thirdSide)
         {
             FirstSide = firstSide;
             SecondSide = secondSide;
@@ -31,7 +28,7 @@ namespace TreangleSort
 
         public double CountArea()
         {
-            double halfPerimeter = CountPerimeter() / BISECTOR;
+            double halfPerimeter = Perimeter / BISECTOR;
 
             return Math.Sqrt(halfPerimeter * (halfPerimeter - FirstSide)
                 * (halfPerimeter - SecondSide) * (halfPerimeter - ThirdSide));
@@ -43,7 +40,7 @@ namespace TreangleSort
             return FirstSide + SecondSide + ThirdSide;
         }
 
-        public int CompareTo(Treangle treangle)
+        public int CompareTo(Triangle treangle)
         {
             if (Area > treangle.Area)
             {

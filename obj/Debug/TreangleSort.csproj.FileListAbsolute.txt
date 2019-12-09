@@ -4,3 +4,7 @@ C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\TreangleSort.pdb
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\obj\Debug\TreangleSort.csprojAssemblyReference.cache
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\obj\Debug\TreangleSort.exe
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\obj\Debug\TreangleSort.pdb
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\FluentValidation.dll
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\System.ComponentModel.Annotations.dll
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\FluentValidation.xml
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\obj\Debug\TreangleSort.csproj.CopyComplete
