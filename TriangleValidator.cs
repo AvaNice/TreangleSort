@@ -10,15 +10,15 @@ namespace TreangleSort
 
             RuleFor(treangle => treangle.FirstSide)
                 .LessThan(treangle => treangle.SecondSide + treangle.ThirdSide)
-                .LessThan(treangle => double.MaxValue);
+                .LessThan(double.MaxValue);
 
             RuleFor(treangle => treangle.SecondSide)
                 .LessThan(treangle => treangle.FirstSide + treangle.ThirdSide)
-                .LessThan(treangle => double.MaxValue);
+                .LessThan(double.MaxValue);
 
             RuleFor(treangle => treangle.ThirdSide)
                 .LessThan(treangle => treangle.FirstSide + treangle.SecondSide)
-                .LessThan(treangle => double.MaxValue);
+                .LessThan(double.MaxValue);
         }
     }
 }

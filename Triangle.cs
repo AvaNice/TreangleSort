@@ -42,21 +42,25 @@ namespace TreangleSort
 
         public int CompareTo(Triangle treangle)
         {
+            int result;
+
             if (Area > treangle.Area)
             {
 
-                return -1;
+                result = -1;
             }
             else if (Area < treangle.Area)
             {
 
-                return 1;
+                result = 1;
             }
             else
             {
 
-                return 0;
+                result = 0;
             }
+
+            return result;
         }
     }
 }

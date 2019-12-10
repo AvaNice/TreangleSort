@@ -46,16 +46,19 @@ namespace TreangleSort
             catch (FormatException ex)
             {
                 ShowIncorrectInput(ex, input);
+                //TODO log
             }
 
             catch (NullReferenceException ex)
             {
                 ShowIncorrectInput(ex, input);
+                //TODO log
             }
 
             catch (IndexOutOfRangeException ex)
             {
                 ShowIncorrectInput(ex, input);
+                //TODO log
             }
 
             return GetTriangle();

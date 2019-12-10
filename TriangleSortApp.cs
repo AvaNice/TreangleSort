@@ -4,9 +4,9 @@ namespace TreangleSort
 {
     class TriangleSortApp
     {
-        private List<Triangle> triangles = new List<Triangle>();
-       
         TriangleUI UI = new TriangleUI();
+
+        SortedSet<Triangle> triangles = new SortedSet<Triangle>();
 
         public void Start()
         {
@@ -16,8 +16,6 @@ namespace TreangleSort
             {
                 Start();
             }
-
-            triangles.Sort();
 
             UI.WriteTriangles(triangles);
 
