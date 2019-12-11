@@ -8,3 +8,8 @@ C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\FluentValidation.
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\System.ComponentModel.Annotations.dll
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\FluentValidation.xml
 C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\obj\Debug\TreangleSort.csproj.CopyComplete
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\Serilog.dll
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\Serilog.Sinks.File.dll
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\Serilog.xml
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\Serilog.Sinks.File.pdb
+C:\C# .Net\ElementaryTasks\TreangleSort\TreangleSort\bin\Debug\Serilog.Sinks.File.xml

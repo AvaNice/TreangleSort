@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 
 namespace TreangleSort
 {
     class TriangleUI
     {
-        TriangleValidator validator = new TriangleValidator();
-
         public Triangle GetTriangle()
         {
             string[] splitedInput = new string[4];
@@ -33,32 +31,25 @@ namespace TreangleSort
 
                 Triangle triangle = new Triangle(name, firstSide, secondSide, thirdSide);
 
-                if (validator.Validate(triangle).IsValid)
-                {
-                    return triangle;
-                }
-                else
-                {
-                    ShowIncorrectInput();
-                }
+                return triangle;
             }
 
             catch (FormatException ex)
             {
                 ShowIncorrectInput(ex, input);
-                //TODO log
+                Log.Logger.Error($"{ex.Message} UI.GetTriang user input wrong format");
             }
 
             catch (NullReferenceException ex)
             {
                 ShowIncorrectInput(ex, input);
-                //TODO log
+                Log.Logger.Error($"{ex.Message} UI.GetTriang user input empty string");
             }
 
             catch (IndexOutOfRangeException ex)
             {
+                Log.Logger.Error($"{ex.Message} UI.GetTriang user entered not all sides");
                 ShowIncorrectInput(ex, input);
-                //TODO log
             }
 
             return GetTriangle();
@@ -77,6 +68,7 @@ namespace TreangleSort
             Console.WriteLine(TextMessages.DO_NEED_MORE);
 
             string input;
+            bool result = false;
 
             input = Console.ReadLine();
 
@@ -84,23 +76,32 @@ namespace TreangleSort
             {
                 case TextMessages.START_MODE:
                 case TextMessages.START_MODE_SECOND:
-
-                    return true;
+                    result = true;
+                    break;
 
                 default:
-
-                    return false;
+                    result = false;
+                    break;
             }
+
+            return result;
+        }
+
+        public void Delay()
+        {
+            Console.ReadKey();
+        }
+
+        public void ShowIncorrectInput()
+        {
+            Console.WriteLine(TextMessages.TREANGLE_NOT_EXIST);
         }
 
         private void ShowIncorrectInput(Exception ex, string input)
         {
             Console.WriteLine(TextMessages.INCORRECT_INPUT);
-        }
-
-        private void ShowIncorrectInput()
-        {
-            Console.WriteLine(TextMessages.TREANGLE_NOT_EXIST);
+            Log.Logger
+                .Information($"{ex.Message}; Incorrect input message is displayed. previous input {input}");
         }
     }
 }

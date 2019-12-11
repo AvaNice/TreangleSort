@@ -1,25 +1,36 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TreangleSort
 {
     class TriangleSortApp
     {
-        TriangleUI UI = new TriangleUI();
+        TriangleUI _userInterface;
+        TriangleValidator _validator;
 
-        SortedSet<Triangle> triangles = new SortedSet<Triangle>();
-
-        public void Start()
+        public TriangleSortApp(TriangleUI userInterface, TriangleValidator validator)
         {
-            triangles.Add(UI.GetTriangle());
+            _userInterface = userInterface;
+            _validator = validator;
+        }
+
+        public void AddTreangle(SortedSet<Triangle> triangles)
+        {
+            Triangle triangle;
+
+            triangle = _userInterface.GetTriangle();
             
-            if(UI.IsMoreTriangles())
+
+            if (_validator.Validate(triangle).IsValid)
             {
-                Start();
+                triangles.Add(triangle);
             }
+            else
+            {
+                _userInterface.ShowIncorrectInput();
 
-            UI.WriteTriangles(triangles);
-
-            Start();
+                throw new ArgumentException("Triangle does not exist");
+            }
         }
     }
 }
