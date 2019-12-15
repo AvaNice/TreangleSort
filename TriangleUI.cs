@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace TreangleSort
 {
-    class TriangleUI
+    public class TriangleUI
     {
         public Triangle GetTriangle()
         {
@@ -33,19 +33,16 @@ namespace TreangleSort
 
                 return triangle;
             }
-
             catch (FormatException ex)
             {
                 ShowIncorrectInput(ex, input);
                 Log.Logger.Error($"{ex.Message} UI.GetTriang user input wrong format");
             }
-
             catch (NullReferenceException ex)
             {
                 ShowIncorrectInput(ex, input);
                 Log.Logger.Error($"{ex.Message} UI.GetTriang user input empty string");
             }
-
             catch (IndexOutOfRangeException ex)
             {
                 Log.Logger.Error($"{ex.Message} UI.GetTriang user entered not all sides");

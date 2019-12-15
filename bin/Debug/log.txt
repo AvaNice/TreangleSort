@@ -2,3 +2,6 @@
 2019-12-11 13:23:13.599 +02:00 [ERR] Входная строка имела неверный формат. UI.GetTriang user input wrong format
 2019-12-11 13:25:29.710 +02:00 [ERR] Индекс находился вне границ массива. UI.GetTriang user entered not all sides
 2019-12-11 13:25:29.720 +02:00 [INF] Индекс находился вне границ массива.; Incorrect input message is displayed. previous input asdasa
+2019-12-11 18:57:06.298 +02:00 [INF] Входная строка имела неверный формат.; Incorrect input message is displayed. previous input asdas.a.
+2019-12-11 18:57:06.308 +02:00 [ERR] Входная строка имела неверный формат. UI.GetTriang user input wrong format
+2019-12-11 18:57:11.081 +02:00 [ERR] Triangle does not exist User triangle not exist

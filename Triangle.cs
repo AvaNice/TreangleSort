@@ -2,7 +2,7 @@
 
 namespace TreangleSort
 {
-    class Triangle : IComparable<Triangle>
+    public class Triangle : IComparable<Triangle>
     {
         private const int BISECTOR = 2;
 
@@ -20,7 +20,6 @@ namespace TreangleSort
             SecondSide = secondSide;
             ThirdSide = thirdSide;
             Name = name;
-
             Perimeter = CountPerimeter();
             Area = CountArea();
         }
@@ -35,7 +34,6 @@ namespace TreangleSort
 
         public double CountPerimeter()
         {
-
             return FirstSide + SecondSide + ThirdSide;
         }
 
@@ -45,17 +43,14 @@ namespace TreangleSort
 
             if (Area > treangle.Area)
             {
-
                 result = -1;
             }
             else if (Area < treangle.Area)
             {
-
                 result = 1;
             }
             else
             {
-
                 result = 0;
             }
 

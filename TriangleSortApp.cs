@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TreangleSort
 {
-    class TriangleSortApp
+    public class TriangleSortApp
     {
         TriangleUI _userInterface;
         TriangleValidator _validator;
@@ -20,7 +20,6 @@ namespace TreangleSort
 
             triangle = _userInterface.GetTriangle();
             
-
             if (_validator.Validate(triangle).IsValid)
             {
                 triangles.Add(triangle);

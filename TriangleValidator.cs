@@ -2,7 +2,7 @@
 
 namespace TreangleSort
 {
-    class TriangleValidator : AbstractValidator<Triangle>
+    public class TriangleValidator : AbstractValidator<Triangle>
     {
         public TriangleValidator()
         {

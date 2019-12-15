@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace TreangleSort
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

@@ -1,6 +1,6 @@
 ﻿namespace TreangleSort
 {
-    static class TextMessages
+    public static class TextMessages
     {
         public const string INCORRECT_INPUT = "Use the numeric value to enter the sides of the triangle.";
         public const string START_MODE_SECOND = "y";
