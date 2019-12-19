@@ -7,10 +7,15 @@ namespace TreangleSort
         private const int BISECTOR = 2;
 
         public string Name { get; }
+
         public double FirstSide { get; }
+
         public double SecondSide { get; }
+
         public double ThirdSide { get; }
+
         public double Area { get; }
+
         public double Perimeter { get; }
 
 
@@ -24,7 +29,7 @@ namespace TreangleSort
             Area = CountArea();
         }
 
-        public double CountArea()
+        private double CountArea()
         {
             double halfPerimeter = Perimeter / BISECTOR;
 
@@ -32,7 +37,7 @@ namespace TreangleSort
                 * (halfPerimeter - SecondSide) * (halfPerimeter - ThirdSide));
         }
 
-        public double CountPerimeter()
+        private double CountPerimeter()
         {
             return FirstSide + SecondSide + ThirdSide;
         }

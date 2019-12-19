@@ -9,16 +9,20 @@ namespace TreangleSort
             RuleFor(treangle => treangle.Name).NotEmpty();
 
             RuleFor(treangle => treangle.FirstSide)
-                .LessThan(treangle => treangle.SecondSide + treangle.ThirdSide)
-                .LessThan(double.MaxValue);
+                .GreaterThan(0)
+                .LessThan(double.MaxValue)
+                .LessThan(treangle => treangle.SecondSide + treangle.ThirdSide);
 
             RuleFor(treangle => treangle.SecondSide)
-                .LessThan(treangle => treangle.FirstSide + treangle.ThirdSide)
-                .LessThan(double.MaxValue);
+                .GreaterThan(0)
+                .LessThan(double.MaxValue)
+                .LessThan(treangle => treangle.FirstSide + treangle.ThirdSide);
 
             RuleFor(treangle => treangle.ThirdSide)
-                .LessThan(treangle => treangle.FirstSide + treangle.SecondSide)
-                .LessThan(double.MaxValue);
+                .GreaterThan(0)
+                .LessThan(double.MaxValue)
+                .LessThan(treangle => treangle.FirstSide + treangle.SecondSide);
+                 
         }
     }
 }
